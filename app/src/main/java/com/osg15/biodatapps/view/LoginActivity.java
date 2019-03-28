@@ -1,4 +1,4 @@
-package com.kejar15.biodata.view;
+package com.osg15.biodatapps.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,8 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.kejar15.biodata.R;
-import com.kejar15.biodata.viewmodel.UserViewModel;
+import com.osg15.biodatapps.R;
+import com.osg15.biodatapps.viewmodel.UserViewModel;
 
 public class LoginActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.kejar15.biodata;
+package com.osg15.biodatapps;
 
 import org.junit.Test;
 

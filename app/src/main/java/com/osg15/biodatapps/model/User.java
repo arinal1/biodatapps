@@ -1,4 +1,4 @@
-package com.kejar15.biodata.model;
+package com.osg15.biodatapps.model;
 
 public class User {
 

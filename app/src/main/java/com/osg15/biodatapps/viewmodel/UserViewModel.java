@@ -1,10 +1,10 @@
-package com.kejar15.biodata.viewmodel;
+package com.osg15.biodatapps.viewmodel;
 
 import android.content.Context;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.kejar15.biodata.model.User;
+import com.osg15.biodatapps.model.User;
 
 public class UserViewModel {
 
