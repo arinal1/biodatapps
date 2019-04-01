@@ -7,9 +7,17 @@ public class ApiClient {
 
     private static Retrofit retrofit = null;
 
-    public static Retrofit getClient() {
+    public static Retrofit getBiodata() {
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://randomuser.me/api/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        return retrofit;
+    }
+
+    public static Retrofit getUser() {
+        retrofit = new Retrofit.Builder()
+                .baseUrl("https://reqres.in/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         return retrofit;

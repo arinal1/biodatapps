@@ -1,67 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.LoginActivity">
-    <ScrollView
+    tools:context=".view.LoginActivity"
+    android:background="@color/white"
+    android:overScrollMode="never"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true" >
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:overScrollMode="never"
-        android:fitsSystemWindows="true">
-
-        <LinearLayout
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/biodata_app"
+            android:textAlignment="center"
+            android:textSize="32sp"
+            app:fontFamily="@font/roboto_bold"
+            android:layout_marginTop="120dp"
+            android:textColor="#B3000000"/>
+        <EditText
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:hint="@string/email"
+            android:drawableLeft="@drawable/ic_user"
+            android:drawablePadding="10dp"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginTop="100dp"
+            android:drawableTint="#99000000"
+            android:textCursorDrawable="@null"
+            android:drawableStart="@drawable/ic_user"
+            tools:ignore="TextFields,UnusedAttribute"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginTop="50dp"
+            android:drawableTint="#99000000"
+            android:textCursorDrawable="@null"
+            android:drawableStart="@drawable/ic_lock"
+            tools:ignore="UnusedAttribute"
+            android:importantForAutofill="no" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/signin"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginTop="50dp"
+            android:layout_marginHorizontal="45dp"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp"
+            tools:ignore="UnusedAttribute" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#a0a0a0"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:paddingVertical="15dp"
+            tools:ignore="UnusedAttribute">
             <TextView
+                android:id="@+id/tv_account_prompt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Biodata App"
-                android:textAlignment="center"
-                android:textSize="30sp"
+                android:text="@string/no_account"
+                android:textColor="#5D5D5D"/>
+            <TextView
+                android:id="@+id/tv_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signup"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
                 app:fontFamily="@font/roboto_bold"
-                android:layout_marginTop="120dp" />
-
-            <EditText
-                android:id="@+id/etEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Email"
-                android:drawableLeft="@drawable/ic_user"
-                android:drawablePadding="10dp"
-                android:layout_marginHorizontal="45dp"
-                android:layout_marginTop="100dp"
-                android:drawableTint="#99000000"/>
-
-            <EditText
-                android:id="@+id/etPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Password"
-                android:drawableLeft="@drawable/ic_lock"
-                android:drawablePadding="10dp"
-                android:inputType="textPassword"
-                android:layout_marginHorizontal="45dp"
-                android:layout_marginTop="50dp"
-                android:drawableTint="#99000000"/>
-
-            <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Login"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:backgroundTint="@color/colorPrimary"
-                android:layout_marginTop="50dp"
-                android:layout_marginHorizontal="45dp"
-                android:padding="20dp"
-                android:layout_marginBottom="20dp"/>
+                android:textColor="@color/black"/>
         </LinearLayout>
-    </ScrollView>
-</RelativeLayout>
+    </LinearLayout>
+</ScrollView>
