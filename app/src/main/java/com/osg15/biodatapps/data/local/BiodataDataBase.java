@@ -5,15 +5,13 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-import com.osg15.biodatapps.model.Biodata;
+import com.osg15.biodatapps.model.DetailBiodata;
 
-@Database(entities = {Biodata.class}, version = 1)
+@Database(entities = {DetailBiodata.class}, version = 1, exportSchema = false)
 abstract class BiodataDataBase extends RoomDatabase {
     private static BiodataDataBase INSTANCE;
 
-    BiodataDao biodataDao() {
-        return null;
-    }
+    abstract BiodataDao biodataDao();
 
     private static final Object sLock = new Object();
 
@@ -21,7 +19,7 @@ abstract class BiodataDataBase extends RoomDatabase {
         synchronized (sLock) {
             if (INSTANCE == null) {
                 INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                        BiodataDataBase.class, "Team.db")
+                        BiodataDataBase.class, "Biodata.db")
                         .build();
             }
             return INSTANCE;

@@ -127,8 +127,15 @@ public class LoginActivity extends AppCompatActivity implements UserNavigator {
         imm.hideSoftInputFromWindow(Objects.requireNonNull(getCurrentFocus()).getWindowToken(), 0);
     }
 
-    private void showLoading(boolean show){
+    @Override
+    public void showLoading(boolean show){
         if (show) loadingDialog.show();
         else loadingDialog.hide();
+    }
+
+    @Override
+    protected void onDestroy() {
+        loadingDialog.dismiss();
+        super.onDestroy();
     }
 }

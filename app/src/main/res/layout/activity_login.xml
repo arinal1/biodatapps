@@ -57,19 +57,27 @@
             tools:ignore="UnusedAttribute"
             android:importantForAutofill="no" />
 
-        <Button
-            android:id="@+id/btnLogin"
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/signin"
-            android:textAllCaps="false"
-            android:textColor="#fff"
-            android:backgroundTint="@color/colorPrimary"
+            app:cardCornerRadius="10dp"
+            android:elevation="3dp"
+            tools:ignore="UnusedAttribute"
+            android:backgroundTint="@color/colorAccent"
             android:layout_marginTop="50dp"
             android:layout_marginHorizontal="45dp"
-            android:padding="20dp"
-            android:layout_marginBottom="20dp"
-            tools:ignore="UnusedAttribute" />
+            android:layout_marginBottom="20dp">
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/signin"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:padding="10dp"
+                tools:ignore="UnusedAttribute"
+                android:background="?selectableItemBackgroundBorderless"/>
+        </android.support.v7.widget.CardView>
         <View
             android:layout_width="1dp"
             android:layout_height="0dp"

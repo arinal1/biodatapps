@@ -1,10 +1,17 @@
 package com.osg15.biodatapps.model;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
+import com.google.gson.annotations.SerializedName;
 
-@Entity(tableName = "biodata")
+import java.util.List;
+
 public class Biodata {
-    @PrimaryKey(autoGenerate = true)
-    public int id;
+
+    public Biodata(List<DetailBiodata> data){
+        this.data = data;
+    }
+
+    @SerializedName("results")
+    public List<DetailBiodata> data;
+
+
 }

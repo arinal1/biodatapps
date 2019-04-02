@@ -9,4 +9,7 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="biodata_app">Biodata App</string>
+    <string name="how_many_data">How Many Data Show</string>
+    <string name="show_user">Show Userlist</string>
+    <string name="foto">Foto</string>
 </resources>

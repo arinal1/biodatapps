@@ -9,15 +9,15 @@ public class ApiClient {
 
     public static Retrofit getBiodata() {
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://randomuser.me/api/")
+                .baseUrl("https://randomuser.me/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         return retrofit;
     }
 
-    public static Retrofit getUser() {
+    static Retrofit getUser() {
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://reqres.in/api/")
+                .baseUrl("https://reqres.in/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         return retrofit;

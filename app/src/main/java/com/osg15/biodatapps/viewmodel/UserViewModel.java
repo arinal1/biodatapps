@@ -55,6 +55,7 @@ public class UserViewModel extends ViewModel {
             Matcher m = p.matcher(email);
             if (!m.matches()) error = 4;
         }
+        userNavigator.showLoading(false);
         switch (error){
             case 1:
                 userNavigator.showSnackbar("Email kosong");
@@ -74,6 +75,7 @@ public class UserViewModel extends ViewModel {
                 break;
             default:
                 valid = true;
+                userNavigator.showLoading(true);
                 break;
         }
         return valid;
